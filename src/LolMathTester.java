@@ -10,7 +10,9 @@ public class LolMathTester {
                 League ln = new League(a);
                 System.out.println(ln.LevelMath());
             } else{
-                System.out.println("Please enter a number between 1 and 29");
+                System.out.println("Invalid input!");
+                System.out.println("Format Command : java LolMathTester [level]");
+                System.out.println("Example : java LolMathTester 12");
             }
         }else {
             Scanner in = new Scanner(System.in);

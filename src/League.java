@@ -39,15 +39,22 @@ public class League{
             case 28 -> num += 34704;
             case 29 -> num += 37392;
         }
-        if(num > 19)
-            num = (int)(num * .80);
         return num;
     }
 
     public String LevelMath() {
         int num = LvlChecker();
+
+        // Need to add check for time played
+        // Account for boosts
+        if(num <= 14256){
+            num = (int) (num * .90);
+        }else if(num >=16080 && num <=37392){
+            num = (int) (num * .80);
+        }
+
         int xpTo30 = 39382;
-        int NeededGames = (xpTo30 - num) / 96;
+        int NeededGames = (xpTo30 - num) / 96; // 96 is how much xp is gained from a 20-min bot game
         int time = ( NeededGames * 20) / 60;
         return String.format("The number of games until Level 30 is about %d. \nTime required is %d hours.",NeededGames,time);
     }
