@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0646fe81-d1ab-41fe-b3cd-0ff118d6dfc2" name="Changes" comment="Initial commit" />
+    <list default="true" id="0646fe81-d1ab-41fe-b3cd-0ff118d6dfc2" name="Changes" comment="nvm who cares" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +41,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667536867329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1667537018015</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667537018015</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fixing git">
+      <created>1667537092840</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667537092840</updated>
+    </task>
+    <task id="LOCAL-00004" summary="nvm who cares">
+      <created>1667537170958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667537170958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,6 +78,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="fixing git" />
+    <MESSAGE value="nvm who cares" />
+    <option name="LAST_COMMIT_MESSAGE" value="nvm who cares" />
   </component>
 </project>
