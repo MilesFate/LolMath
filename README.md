@@ -11,6 +11,5 @@ I have been working on this for a while and finally decided to upload it to GitH
 
 >Refactor Code
 
->If possible remove gitignore from future commits
 
 >Check to see if using xp boost
