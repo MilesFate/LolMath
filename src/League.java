@@ -1,6 +1,7 @@
 public class League{
 
     private static int level;
+    private static boolean boost;
 
     public League(int value){
         level = value;
@@ -44,6 +45,9 @@ public class League{
 
     public String LevelMath() {
         int num = LvlChecker();
+        int xpTo30 = 39382;
+        int baseXp = 96;
+        int boostXp = 0;
 
         // Need to add check for time played
         // Account for boosts
@@ -53,8 +57,12 @@ public class League{
             num = (int) (num * .80);
         }
 
-        int xpTo30 = 39382;
-        int NeededGames = (xpTo30 - num) / 96; // 96 is how much xp is gained from a 20-min bot game
+        if(boost){
+            boostXp = baseXp;
+        }
+
+        int xp = baseXp + boostXp;
+        int NeededGames = ((xpTo30 - num) / xp);
         int time = ( NeededGames * 20) / 60;
         return String.format("The number of games until Level 30 is about %d. \nTime required is %d hours.",NeededGames,time);
     }
@@ -65,5 +73,9 @@ public class League{
         } catch (NumberFormatException e) {
             return -1;
         }
+    }
+
+    public static void boost(){
+        boost = true;
     }
 }

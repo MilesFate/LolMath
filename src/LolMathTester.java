@@ -2,23 +2,45 @@ import java.util.Scanner;
 
 public class LolMathTester {
     public static void main(String[] args) {
-        int input;
+        int a;
+        int b = 0;
 
         if(args.length > 0){
-            int a = League.TryParseInt32(args[0]);
+            if(args[0].equalsIgnoreCase("-B")){
+                League.boost();
+                b += 1;
+            }else if(args[0].equalsIgnoreCase("--help")){
+                System.out.println("usage: java LolMathTester <operation> [level]");
+                System.out.println("operations:");
+                System.out.println("\tjava LolMathTester{ --help}");
+                System.out.println("\tjava LolMathTester{ -B}");
+                System.out.println("\tjava LolMathTester{ -b}");
+                System.exit(0);
+            }
+            a = League.TryParseInt32(args[b]);
             if(a > 0) {
                 League ln = new League(a);
                 System.out.println(ln.LevelMath());
             } else{
-                System.out.println("Invalid input!");
-                System.out.println("Format Command : java LolMathTester [level]");
-                System.out.println("Example : java LolMathTester 12");
+                System.out.println("error: invalid option '" + args[0] + "'");
+                System.out.println("try --help");
             }
         }else {
+            int input;
+            String boosty;
             Scanner in = new Scanner(System.in);
 
             System.out.println("This program is made to make the Process of leveling easier");
             System.out.println("\"Assuming no xp earned in the entered level\"");
+
+            do {
+                System.out.print("Do you have active boost:");
+                boosty = in.next();
+                if(boosty.equalsIgnoreCase("yes")){
+                    League.boost();
+                }
+            }while(!(boosty.equalsIgnoreCase("yes") ||boosty.equalsIgnoreCase("no")));
+
             System.out.println("Enter a number between 1 and 29.");
             System.out.println("-------------------------------------------------");
 
