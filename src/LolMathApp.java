@@ -7,52 +7,55 @@
 import javax.swing.*;
 
 public class LolMathApp {
-    private static int value = 0;
+    private static int levelValue = 0;
 
     public static void main(String[] args)
     {
         final int FrameWidth = 500;
         final int FrameHeight = 200;
-        JFrame frame = new JFrame();
-        JPanel panel = new JPanel();
+        JFrame jFrame = new JFrame();
+        JPanel jPanel = new JPanel();
 
-        frame.setSize(FrameWidth, FrameHeight);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        jFrame.setSize(FrameWidth, FrameHeight);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.setVisible(true);
 
         JButton Increase = new JButton("Increase Value");
         JButton Decrease = new JButton("Decrease Value");
         JButton submit = new JButton("Submit");
-        JLabel Num = new JLabel(String.valueOf(value));
+        JLabel Num = new JLabel(String.valueOf(levelValue));
+        JLabel WhiteSpace = new JLabel("    "); // this is dumb but works
         JLabel Output = new JLabel();
 
         // TOD0 Properly format display layout
-        panel.add(Num);
-        panel.add(Increase);
-        panel.add(Decrease);
-        panel.add(submit);
-        panel.add(Output);
-        frame.add(panel);
+        jPanel.add(Num);
+        jPanel.add(Increase);
+        jPanel.add(Decrease);
+        jPanel.add(submit);
+        jPanel.add(WhiteSpace); // this is dumb but works
+        jPanel.add(Output);
+        jFrame.add(jPanel);
 
+        // learned about these in class and now I wanna use them here
+        // for sure not the main reason I even added this file ^_^
         Increase.addActionListener(e -> {
-            value++;
-            Num.setText(String.valueOf(value));
+            levelValue++;
+            Num.setText(String.valueOf(levelValue));
         });
 
         Decrease.addActionListener(e -> {
-            value--;
-            Num.setText(String.valueOf(value));
+            levelValue--;
+            Num.setText(String.valueOf(levelValue));
         });
 
         submit.addActionListener(e ->{
-            if(value >= 30 || value <= 0){
+            if(levelValue >= 30 || levelValue <= 0){
                 Output.setText("Index out of bounds");
             }else{
-                League lg = new League(value);
+                League lg = new League(levelValue);
                 Output.setText(lg.LevelMath());
             }
         });
-
 
     }
 }
