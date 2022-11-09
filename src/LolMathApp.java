@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 public class LolMathApp {
     private static final int FRAME_WIDTH = 500;
-    private static final int FRAME_HEIGHT = 500;
+    private static final int FRAME_HEIGHT = 200;
     private static int value = 0;
 
     public static void main(String[] args)
@@ -19,12 +19,13 @@ public class LolMathApp {
 
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        JButton button = new JButton("+");
-        JButton button2 = new JButton("-");
+        JButton button = new JButton("Increase Value");
+        JButton button2 = new JButton("Decrease Value");
         JButton button3 = new JButton("Submit");
         JLabel label = new JLabel("" + value);
         JLabel label2 = new JLabel("");
 
+        // TOD0 Properly format display layout
         panel.add(button);
         panel.add(button2);
         panel.add(button3);
@@ -43,9 +44,12 @@ public class LolMathApp {
         });
 
         button3.addActionListener(e ->{
-            League lg = new League(value);
-            label2.setText(lg.LevelMath());
-
+            if(value >= 30 || value <= 0){
+                label2.setText("Index out of bounds");
+            }else{
+                League lg = new League(value);
+                label2.setText(lg.LevelMath());
+            }
         });
 
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
