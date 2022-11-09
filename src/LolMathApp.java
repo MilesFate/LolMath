@@ -4,56 +4,55 @@
 * I will 100% change this once I spend the time to learn more about swing
 */
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class LolMathApp {
-    private static final int FRAME_WIDTH = 500;
-    private static final int FRAME_HEIGHT = 200;
     private static int value = 0;
 
     public static void main(String[] args)
     {
-
+        final int FrameWidth = 500;
+        final int FrameHeight = 200;
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        JButton button = new JButton("Increase Value");
-        JButton button2 = new JButton("Decrease Value");
-        JButton button3 = new JButton("Submit");
-        JLabel label = new JLabel("" + value);
-        JLabel label2 = new JLabel("");
+
+        frame.setSize(FrameWidth, FrameHeight);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        JButton Increase = new JButton("Increase Value");
+        JButton Decrease = new JButton("Decrease Value");
+        JButton submit = new JButton("Submit");
+        JLabel Num = new JLabel(String.valueOf(value));
+        JLabel Output = new JLabel();
 
         // TOD0 Properly format display layout
-        panel.add(button);
-        panel.add(button2);
-        panel.add(button3);
-        panel.add(label);
-        panel.add(label2);
+        panel.add(Num);
+        panel.add(Increase);
+        panel.add(Decrease);
+        panel.add(submit);
+        panel.add(Output);
         frame.add(panel);
 
-        button.addActionListener(e -> {
+        Increase.addActionListener(e -> {
             value++;
-            label.setText(""+ value);
+            Num.setText(String.valueOf(value));
         });
 
-        button2.addActionListener(e -> {
+        Decrease.addActionListener(e -> {
             value--;
-            label.setText(""+ value);
+            Num.setText(String.valueOf(value));
         });
 
-        button3.addActionListener(e ->{
+        submit.addActionListener(e ->{
             if(value >= 30 || value <= 0){
-                label2.setText("Index out of bounds");
+                Output.setText("Index out of bounds");
             }else{
                 League lg = new League(value);
-                label2.setText(lg.LevelMath());
+                Output.setText(lg.LevelMath());
             }
         });
 
-        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+
     }
 }
