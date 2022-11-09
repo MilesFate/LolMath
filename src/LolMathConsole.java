@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LolMathTester {
+public class LolMathConsole {
     public static void main(String[] args) {
         int a;
         int b = 0;
