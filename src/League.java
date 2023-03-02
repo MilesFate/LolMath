@@ -1,7 +1,7 @@
 public class League{
 
     private static int level;
-    private static boolean boost;
+    private static boolean boost = false;
 
     public League(int value){
         level = value;
@@ -77,5 +77,8 @@ public class League{
 
     public static void boost(){
         boost = true;
+    }
+    public static void offBoost(){
+        boost = false;
     }
 }
