@@ -20,7 +20,6 @@ public class LolMathApp {
 
         jFrame.setSize(FrameWidth, FrameHeight);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.setVisible(true);
 
         JButton Increase = new JButton("Increase Value");
         JButton Decrease = new JButton("Decrease Value");
@@ -89,5 +88,6 @@ public class LolMathApp {
             }
         });
 
+        jFrame.setVisible(true);
     }
 }
