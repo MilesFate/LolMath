@@ -11,40 +11,53 @@ public class LolMathApp {
     private static int levelValue = 1;
     private static boolean boost = false;
 
-    public static void main(String[] args)
-    {
-        final int FrameWidth = 500;
-        final int FrameHeight = 200;
+    public static void handleApp() {
         JFrame jFrame = new JFrame();
         JPanel jPanel = new JPanel();
+        Container container;
 
-        jFrame.setSize(FrameWidth, FrameHeight);
+        jFrame.setTitle("League Account Leveling Calculator");
+        ImageIcon img = new ImageIcon("src\\icon\\111.png");
+        jFrame.setIconImage(img.getImage());
+
+        jFrame.setBounds(300, 90, 600, 300);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        container = jFrame.getContentPane();
+        jFrame.setResizable(false);
+        container.setLayout(null);
 
         JButton Increase = new JButton("Increase Value");
+        jButton(Increase,50,200);
+        container.add(Increase);
+
         JButton Decrease = new JButton("Decrease Value");
+        jButton(Decrease,200,200);
+        container.add(Decrease);
+
         JButton OnBoost = new JButton("Boost Off");
+        jButton(OnBoost,350,200);
+        container.add(OnBoost);
+
         JButton submit = new JButton("Submit");
-        JLabel Num = new JLabel(String.valueOf(levelValue));
-        JLabel WhiteSpace = new JLabel("    "); // this is dumb but works
+        jButton(submit,200,230);
+        container.add(submit);
+
+
+        JLabel Num = new JLabel("Level: " + levelValue);
+        Num.setFont(new Font("Arial", Font.BOLD, 15));
+        Num.setSize(90, 20);
+        Num.setLocation(10, 10);
+        container.add(Num);
+
         JLabel Output = new JLabel();
+        Output.setFont(new Font("Arial", Font.BOLD, 15));
+        Output.setSize(900, 200);
+        Output.setLocation(10, 10);
+        container.add(Output);
 
-        jFrame.setLayout(new BorderLayout());
 
-        // TOD0 Properly format display layout
-        jPanel.add(Num);
-        jPanel.add(OnBoost);
-        jPanel.add(Increase);
-        jPanel.add(Decrease);
-        jPanel.add(submit);
-        jPanel.add(WhiteSpace); // this is dumb but works
-        jPanel.add(Output);
+
         jFrame.add(jPanel);
-
-
-        // learned about these in class and now I wanna use them here
-        // for sure not the main reason I even added this file ^_^
-        // Its been months since that last comment, I really dislike these
         OnBoost.addActionListener(e -> {
 
             if(boost){
@@ -61,7 +74,7 @@ public class LolMathApp {
             if(levelValue >= 30) {
                 levelValue = 29;
             }
-            Num.setText(String.valueOf(levelValue));
+            Num.setText("Level: " + levelValue);
         });
 
         Decrease.addActionListener(e -> {
@@ -69,11 +82,9 @@ public class LolMathApp {
             if(levelValue <= 0) {
                 levelValue = 1;
             }
-            Num.setText(String.valueOf(levelValue));
+            Num.setText("Level: " + levelValue);
         });
 
-        // this one thing helped me find a bug so that was nice to solve
-        // after a few hours : D
         submit.addActionListener(e ->{
             if(levelValue >= 30 || levelValue <= 0){
                 Output.setText("Index out of bounds");
@@ -90,4 +101,11 @@ public class LolMathApp {
 
         jFrame.setVisible(true);
     }
+
+    private static void jButton(JButton button, int x, int y){
+        button.setFont(new Font("Arial", Font.PLAIN, 15));
+        button.setSize(140, 20);
+        button.setLocation(x, y);
+    }
+
 }
