@@ -1,5 +1,7 @@
 # LolMath
 
+<h1>I AM FINISHED WITH THIS : D</h1>
+
 <h2>This is meant to be a program that serves two purposes.</h2>
 
 Help me learn java and help me see how many games it will take to level a League of legends account to level 30.
