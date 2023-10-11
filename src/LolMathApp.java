@@ -10,14 +10,15 @@ import java.awt.*;
 public class LolMathApp {
     private static int levelValue = 1;
     private static boolean boost = false;
-
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static void handleApp() {
         JFrame jFrame = new JFrame();
         JPanel jPanel = new JPanel();
         Container container;
 
+        //JLabel myHeaderImage = new JLabel(new ImageIcon(LolMathApp.class.getResource("src\\icon\\111.png")));
         jFrame.setTitle("League Account Leveling Calculator");
-        ImageIcon img = new ImageIcon("src\\icon\\111.png");
+        ImageIcon img = new ImageIcon("C:\\Users\\anon\\IdeaProjects\\LolMath\\src\\icon\\111.PNG");
         jFrame.setIconImage(img.getImage());
 
         jFrame.setBounds(300, 90, 600, 300);
@@ -26,24 +27,29 @@ public class LolMathApp {
         jFrame.setResizable(false);
         container.setLayout(null);
 
-        JButton Increase = new JButton("Increase Value");
-        jButton(Increase,50,200);
-        container.add(Increase);
-
-        JButton Decrease = new JButton("Decrease Value");
-        jButton(Decrease,200,200);
-        container.add(Decrease);
-
         JButton OnBoost = new JButton("Boost Off");
         jButton(OnBoost,350,200);
         container.add(OnBoost);
 
         JButton submit = new JButton("Submit");
-        jButton(submit,200,230);
+        jButton(submit,200,200);
         container.add(submit);
 
+        String[] levels
+                = { "1", "2", "3", "4", "5",
+                "6", "7", "8", "9", "10",
+                "11", "12", "13", "14", "15",
+                "16", "17", "18", "19", "20",
+                "21", "22", "23", "24", "25",
+                "26", "27", "28", "29", };
+        JComboBox level = new JComboBox(levels);
+        level.setFont(new Font("Arial", Font.BOLD, 15));
+        level.setSize(90, 20);
+        level.setLocation(90, 10);
+        container.add(level);
 
-        JLabel Num = new JLabel("Level: " + levelValue);
+
+        JLabel Num = new JLabel("Level: ");
         Num.setFont(new Font("Arial", Font.BOLD, 15));
         Num.setSize(90, 20);
         Num.setLocation(10, 10);
@@ -69,23 +75,9 @@ public class LolMathApp {
             }
         });
 
-        Increase.addActionListener(e -> {
-            levelValue++;
-            if(levelValue >= 30) {
-                levelValue = 29;
-            }
-            Num.setText("Level: " + levelValue);
-        });
-
-        Decrease.addActionListener(e -> {
-            levelValue--;
-            if(levelValue <= 0) {
-                levelValue = 1;
-            }
-            Num.setText("Level: " + levelValue);
-        });
 
         submit.addActionListener(e ->{
+            levelValue = League.TryParseInt32((String) level.getSelectedItem());
             if(levelValue >= 30 || levelValue <= 0){
                 Output.setText("Index out of bounds");
             }else if(boost){

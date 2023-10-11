@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="LolMath:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e6791e3-1949-4855-b6f5-a9f0c294fdf2" name="Changes" comment="moved setVisable">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LolMath.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LolMathCommandLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LolMathMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icon/111.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="4e6791e3-1949-4855-b6f5-a9f0c294fdf2" name="Changes" comment="Division of labor, things look nice now, basically done with this project after what ... a year : P">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LolMath_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LolMath/LolMathApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LolMath/LolMathApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LolMath/LolMathMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LolMath/LolMathMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LolMathApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LolMathApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LolMathConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LolMathConsole.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/anon/IdeaProjects/LolMath/src/icon",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anon/IdeaProjects/LolMath&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anon\IdeaProjects\LolMath\src\icon" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="LolMathMain" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
@@ -95,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1677729438700</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Division of labor, things look nice now, basically done with this project after what ... a year : P">
+      <option name="closed" value="true" />
+      <created>1696288440935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696288440935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="moved setVisable" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved setVisable" />
+    <MESSAGE value="Division of labor, things look nice now, basically done with this project after what ... a year : P" />
+    <option name="LAST_COMMIT_MESSAGE" value="Division of labor, things look nice now, basically done with this project after what ... a year : P" />
   </component>
 </project>
