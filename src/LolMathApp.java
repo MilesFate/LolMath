@@ -18,8 +18,6 @@ public class LolMathApp {
 
         //JLabel myHeaderImage = new JLabel(new ImageIcon(LolMathApp.class.getResource("src\\icon\\111.png")));
         jFrame.setTitle("League Account Leveling Calculator");
-        ImageIcon img = new ImageIcon("src/icon/111.PNG");
-        jFrame.setIconImage(img.getImage());
 
         jFrame.setBounds(300, 90, 600, 300);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
